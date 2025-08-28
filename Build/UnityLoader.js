@@ -1,9 +1,3 @@
-https://copilot.microsoft.com/shares/SV8wnZ5jk6Yw6eBh7mBBW
-https://copilot.microsoft.com/shares/jRpTp6LsjDmRW11x6A3xH
-
-
-
-
 var UnityLoader=UnityLoader||{compatibilityCheck:function(e,t,r){
 function check(){
 
