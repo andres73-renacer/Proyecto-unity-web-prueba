@@ -35,7 +35,9 @@ const cond1 = [r, t, t, t];
 e.popup(msmError[x],[{ text: "OK", callback: cond1[x] }]);
 }
 
-
+check();
+}
+  
 ,Blobs:{},loadCode:function(e,t,r){var n=[].slice.call(UnityLoader.Cryptography.md5(e)).map(function(e){return("0"+e.toString(16)).substr(-2)}).join(""),o=document.createElement("script"),a=URL.createObjectURL(new Blob(['UnityLoader["'+n+'"]=',e],{type:"text/javascript"}));UnityLoader.Blobs[a]=r,o.src=a,o.onload=function(){URL.revokeObjectURL(a),t(n)},document.body.appendChild(o)},allocateHeapJob:function(e,t){for(var r=e.TOTAL_STACK||5242880,n=e.TOTAL_MEMORY||(e.buffer?e.buffer.byteLength:268435456),o=65536,a=16777216,i=o;i<n||i<2*r;)i+=i<a?i:a;i!=n&&e.printErr("increasing TOTAL_MEMORY to "+i+" to be compliant with the asm.js spec (and given that TOTAL_STACK="+r+")"),n=i,t.parameters.useWasm?(e.wasmMemory=new WebAssembly.Memory({initial:n/o,maximum:n/o}),e.buffer=e.wasmMemory.buffer):e.buffer?e.buffer.byteLength!=n&&(e.printErr("provided buffer should be "+n+" bytes, but it is "+e.buffer.byteLength+"
 
 
