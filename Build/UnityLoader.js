@@ -21,7 +21,7 @@ function btn(x){
 var msmError = 
 [
 "📜Este navegador no soporta WebGL.\nThis browser does not support WebGL",
-"📱Tenga en cuenta que WebGL puede tener fallos en móviles.\nPresione Ok para continuar.\n\nPlease note that WebGL may be buggy on mobile devices.\nPress Ok to continue.",
+"📱Tenga en cuenta que WebGL puede tener fallos en móviles.\n<br>Presione Ok para continuar.\n\n<br>Please note that WebGL may be buggy on mobile devices.\n<br>Press Ok to continue.",
 "📰Este navegador no fue probado con WebGL puede tener fallos.\nPresione Ok para continuar.\n\nThis browser has not been tested with WebGL and may have issues.\nPress Ok to continue.",
 "📰📲WebGL puede tener fallos en móvil y con navegador no probados.\nPresione Ok para continuar.\n\nWebGL may be buggy on untested mobile and browsers.\nPress Ok to continue."
 ];
