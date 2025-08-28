@@ -4,7 +4,6 @@ var UnityLoader = UnityLoader || {
     var msgNoWebGL = "Tu navegador no soporta WebGL / Your browser does not support WebGL";
     var msgMobile  = "Unity WebGL no está soportado en móviles. Pulsa OK para continuar. / Unity WebGL is not currently supported on mobiles. Press OK to continue.";
     var msgNoBrowser = "Tu navegador no está soportado para este contenido Unity WebGL. Pulsa OK para continuar. / Your browser is not currently supported for this Unity WebGL content. Press OK to continue.";
-
     if (!UnityLoader.SystemInfo.hasWebGL) {
       e.popup(msgNoWebGL, [{ text: "OK", callback: r }]);
     } else if (UnityLoader.SystemInfo.mobile) {
