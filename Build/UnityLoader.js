@@ -25,7 +25,7 @@ var msmError =
 "📰Este navegador no fue probado con WebGL puede tener fallos.\nPresione Ok para continuar.\n\nThis browser has not been tested with WebGL and may have issues.\nPress Ok to continue.",
 "📰📲WebGL puede tener fallos en móvil y con navegador no probados.\nPresione Ok para continuar.\n\nWebGL may be buggy on untested mobile and browsers.\nPress Ok to continue."
 ];
-const cond1 = [r, t, t, t];
+const cond1 = [t, t, t, t];
 e.popup(msmError[x],[{ text: "OK", callback: cond1[x] }]);
 }
 
