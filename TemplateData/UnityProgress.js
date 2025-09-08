@@ -182,4 +182,5 @@ function IntentoError(lugar, valor, txto) {
     console.warn(lugar + " falló demasiadas veces, forzando finalización");
     paso = 5; // forzar animación final
   }
+
 }
