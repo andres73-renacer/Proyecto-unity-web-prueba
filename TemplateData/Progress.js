@@ -39,7 +39,7 @@ c(gi,p) {
 
 logoDiv.replaceWith(canvas);
 		}
-		paso |= 1 //0b01
+		paso = 1; //0b01
 	} catch(e) {
 		console.error("Error canvas", e);
 		if (++fallos >= MAX_FALLOS) {
@@ -54,6 +54,7 @@ la(gi, p) {
 	try {
 	const logoA = "TemplateData/logoC.png";
 	cargarLogo(gi, logoA);
+		paso = 3;
 	} catch(e) {
 	IntentoError("logo", e, "Error ");
 	}
@@ -87,7 +88,7 @@ const PL = {
 	// Paso 0: esperar a que Module exista
 	m(gi,p) {
 		if (!gi.Module) return; // no avanza hasta que esté listo
-		paso = 0;
+		paso = 2;
 	},
 
 	// Paso final: animación y cierre
