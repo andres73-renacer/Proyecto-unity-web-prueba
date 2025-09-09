@@ -20,6 +20,7 @@ cl(gi,p) {
 c(gi,p) {
 	try {
 		const logoDiv = document.querySelector(".webgl-content .logo");
+		console.log("logoDiv encontrado: ", logoDiv);
 		if (logoDiv) {
 		const canvas = document.createElement("canvas");
 		canvas.width = 130;
