@@ -19,20 +19,26 @@ cl(gi,p) {
 // Inicializar canvas
 c(gi,p) {
 	try {
+		const logoDiv = document.querySelector(".webgl-content .logo");
+		if (logoDiv) {
 		const canvas = document.createElement("canvas");
 		canvas.width = 130;
 		canvas.height = 130;
-		canvas.style.display = "block";
+			canvas.className = "logo"; // hereda centrado/tamaño del css
+		
+			/*canvas.style.display = "block";
 		canvas.style.margin = "0 auto";
 		canvas.style.backgroundColor = "red";
 		canvas.style.zIndex = "9999";
 		canvas.style.position = "relative";
-		
+			
 		gi.container.appendChild(canvas);
-
+*/
 		gi.loaderCanvas = canvas;
 		gi.loaderCtx = canvas.getContext("2d");
-		
+
+logoDiv.replaceWith(canvas);
+		}
 		paso |= 1 //0b01
 	} catch(e) {
 		console.error("Error canvas", e);
