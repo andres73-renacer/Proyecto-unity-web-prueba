@@ -52,6 +52,10 @@ logoDiv.replaceWith(canvas);
 // Dibujar logo A
 la(gi, p) {
 	try {
+		if (!gi.loaderCanvas || !gi.loaderCtx){
+			console.warn("falta canvas");
+			return;
+		}
 	const logoA = "TemplateData/logoC.png";
 	cargarLogo(gi, logoA);
 		paso = 3;
