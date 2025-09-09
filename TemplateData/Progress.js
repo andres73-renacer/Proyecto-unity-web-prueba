@@ -42,7 +42,7 @@ c(gi,p) {
 // Dibujar logo A
 la(gi, p) {
 	try {
-	const logoA = "logoA.png";
+	const logoA = "LogoA.png";
 	cargarLogo(gi, logoA);
 	} catch(e) {
 	IntentoError("logo", e, "Error ");
