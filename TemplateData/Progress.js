@@ -24,6 +24,10 @@ c(gi,p) {
 		canvas.height = 130;
 		canvas.style.display = "block";
 		canvas.style.margin = "0 auto";
+		canvas.style.backgroundColor = "red";
+		canvas.style.zIndex = "9999";
+		canvas.style.position = "relative";
+		
 		gi.container.appendChild(canvas);
 
 		gi.loaderCanvas = canvas;
