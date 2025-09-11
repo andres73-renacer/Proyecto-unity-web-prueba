@@ -19,13 +19,14 @@ cl(gi,p) {
 // Inicializar canvas
 c(gi,p) {
 	try {
-		const logoDiv = document.querySelector(".webgl-content .logo");
-		console.log("logoDiv encontrado: ", logoDiv);
-		if (logoDiv) {
-		const canvas = document.createElement("canvas");
-		canvas.width = 130;
-		canvas.height = 130;
-			canvas.className = "logo"; // hereda centrado/tamaño del css
+		gameInstance.logo  = document.createElement("canvas");
+		gameInstance.logo.width = 130;
+		gameInstance.logo.height = 130;
+		gameInstance.logo.className = "logo" + gameInstance.Module.splashScreenStyle;
+		gameInstance.container.appendChild(gameInstance.logo);
+
+		
+			//canvas.className = "logo"; // hereda centrado/tamaño del css
 		
 			/*canvas.style.display = "block";
 		canvas.style.margin = "0 auto";
@@ -35,11 +36,14 @@ c(gi,p) {
 			
 		gi.container.appendChild(canvas);
 */
-		gi.loaderCanvas = canvas;
-		gi.loaderCtx = canvas.getContext("2d");
-
-logoDiv.replaceWith(canvas);
+		const ctx = gameInstance.logo.getContext("2d");
+		const img = new Image();
+		img.src = "logoC";
+		img.onload = () => {
+			ctx.drawImage(img, 0, 0, gameInstance.logo.width, gameInstance.logo.height);			
 		}
+
+		
 		paso = 1; //0b01
 	} catch(e) {
 		console.error("Error canvas", e);
