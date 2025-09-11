@@ -19,11 +19,17 @@ cl(gi,p) {
 // Inicializar canvas
 c(gi,p) {
 	try {
-		gameInstance.logo  = document.createElement("canvas");
+		gameInstance.logo  = document.createElement("div");
+		gameInstance.logo.className = "logo " + gameInstance.Module.splashScreenStyle;
+		gameInstance.container.appendChild(gameInstance.logo);
+
+		const logoCanvas =document.createElement("canvas");
 		gameInstance.logo.width = 130;
 		gameInstance.logo.height = 130;
-		gameInstance.logo.className = "logo" + gameInstance.Module.splashScreenStyle;
-		gameInstance.container.appendChild(gameInstance.logo);
+		gameInstance.logo.appendChild(logoCanvas);
+		
+		
+		
 
 		
 			//canvas.className = "logo"; // hereda centrado/tamaño del css
@@ -36,11 +42,11 @@ c(gi,p) {
 			
 		gi.container.appendChild(canvas);
 */
-		const ctx = gameInstance.logo.getContext("2d");
+		const ctx = logoCanvas.getContext("2d");
 		const img = new Image();
 		img.src = "TemplateData/logoC.png";
 		img.onload = () => {
-			ctx.drawImage(img, 0, 0, gameInstance.logo.width, gameInstance.logo.height);			
+			ctx.drawImage(img, 0, 0, logoCanvas.width, logoCanvas.height);			
 		}
 
 		
