@@ -38,7 +38,7 @@ c(gi,p) {
 */
 		const ctx = gameInstance.logo.getContext("2d");
 		const img = new Image();
-		img.src = "logoC";
+		img.src = "TemplateData/logoC.png";
 		img.onload = () => {
 			ctx.drawImage(img, 0, 0, gameInstance.logo.width, gameInstance.logo.height);			
 		}
